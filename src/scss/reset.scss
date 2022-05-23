@@ -1,0 +1,70 @@
+@import "_variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: $htmlSize;
+    overflow-x: hidden;
+}
+
+body {
+    background: $body;
+    font-size: $bodySize;
+    font-family: $fontFamily;
+    color:$black;
+    display: flex;
+    flex-direction: column;
+
+    ::selection {
+        color: $white;
+        background: $black;
+    }
+}
+
+a {
+    text-decoration: none;
+    color:$black;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        transition: all .5s ease-in-out;
+    }
+
+    &:link {
+        text-decoration: none;
+        word-break: break-word;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    border: none;
+    font-family: $fontFamily;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+dl, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

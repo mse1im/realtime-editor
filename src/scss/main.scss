@@ -1,0 +1,130 @@
+@import "_variables";
+@import "_mixin";
+@import "reset";
+
+header {
+
+}
+
+main {
+    flex: 1 0 auto;
+
+    .content-area {
+        .settings {
+            button.save {
+                background-color:$yellow;
+                padding:0 2rem;
+                color:$black;
+                @include hover-out;
+                height: 40px;
+
+                &:hover {
+                    opacity: 0.5;
+                    @include hover-out;
+                }
+            }
+
+            select {
+                height: 40px;
+                padding:0 2rem 0 0;
+            }
+        }
+
+        .content {
+            min-height: 500px;
+            border:1px solid $border;
+            background-color: $grey;
+        }
+    }
+
+    .editor-area {
+        .header {
+            height: 60px;
+            border:1px solid $border;
+
+            button.min {
+                background-color:$black;
+                padding:0 2rem;
+                color:$white;
+                @include hover-out;
+
+                &:hover {
+                    opacity: 0.5;
+                    @include hover-out;
+                }
+            }
+
+            button.run {
+                background-color:$green;
+                padding:0 2rem;
+                color:$white;
+                @include hover-out;
+
+                &:hover {
+                    opacity: 0.5;
+                    @include hover-out;
+                }
+            }
+        }
+
+        .editor {
+            .html, .css, .js {
+                height: 350px;
+                border:1px solid $border;
+                flex-grow: 1;
+                overflow: scroll;
+                flex-direction: column;
+
+                h2 {
+                    border-bottom: 1px solid $border;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 50px;
+                    background-color: $grey;
+                    overflow: hidden;
+                    margin:0;
+                    color:$black;
+
+                    &.js {
+                        background-color:#F0DB4F;
+                    }
+
+                    &.html {
+                        background-color:#e44c25;
+                        color:$white;
+                    }
+
+                    &.css {
+                        background-color:#31a5d9;
+                        color:$white;
+                    }
+                }
+
+                textarea {
+                    height: 300px;
+                    border: none;
+
+                    &:focus-visible, &:focus-within, &:focus {
+                        border:none;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+            }
+
+            @media screen and (max-width: $screenmd) {
+                flex-direction: column;
+
+                .html, .css, .js {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    flex-shrink: 0;
+}

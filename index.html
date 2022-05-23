@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Editor - Insider Case</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/main.min.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid mt-5 d-flex w-100 justify-content-center justify-content-lg-start">
+            <img src="/src/img/logo-old.webp" alt="Insider">
+        </div>
+    </header>
+    <main>
+        <section class="content-area container-fluid">
+            <div class="settings w-100 justify-content-end align-items-center d-flex">
+                <select name="history" id="history">
+                    <option value="history" selected>History</option>
+                </select>
+                <button class="ms-4 save">Save</button>
+            </div>
+            <iframe src="" frameborder="0" class="content my-5 w-100 p-3"></iframe>
+        </section>
+        <section class="editor-area container-fluid">
+            <div class="header w-100 d-flex justify-content-end p-3">
+                <button class="min me-4">Minimize</button>
+                <button class="run">Run</button>
+            </div>
+            <div class="editor d-flex w-100 flex-wrap mt-3">
+                <div class="js d-flex">
+                    <h2 class="js">Javascript</h2>
+                    <textarea name="javascript" id="javascript"></textarea>
+                </div>
+                <div class="html d-flex">
+                    <h2 class="html">HTML</h2>
+                    <textarea name="html5" id="html5"></textarea>
+                </div>
+                <div class="css d-flex">
+                    <h2 class="css">CSS</h2>
+                    <textarea name="css3" id="css3"></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex w-100 justify-content-center my-5 pb-5">
+        Copyright Mehmet Selim Turan © Made with ❤
+    </footer>
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
