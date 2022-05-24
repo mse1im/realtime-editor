@@ -14,18 +14,20 @@
 <body>
     <header>
         <div class="container-fluid mt-5 d-flex w-100 justify-content-center justify-content-lg-start">
-            <img src="/src/img/logo-old.webp" alt="Insider">
+            <a href="/">
+                <img src="/src/img/logo-old.webp" alt="Insider">
+            </a>
         </div>
     </header>
     <main>
         <section class="content-area container-fluid">
             <div class="settings w-100 justify-content-end align-items-center d-flex">
                 <select name="history" id="history">
-                    <option value="history" selected>History</option>
+                    <option value="history" disabled selected hidden>History</option>
                 </select>
                 <button class="ms-4 save">Save</button>
             </div>
-            <iframe src="" frameborder="0" class="content my-5 w-100 p-3"></iframe>
+            <iframe class="content my-5 w-100 p-3" frameborder="0"></iframe>
         </section>
         <section class="editor-area container-fluid">
             <div class="header w-100 d-flex justify-content-end p-3">
@@ -34,15 +36,15 @@
             </div>
             <div class="editor d-flex w-100 flex-wrap mt-3">
                 <div class="js d-flex">
-                    <h2 class="js">Javascript</h2>
+                    <div class="js title">Javascript</div>
                     <textarea name="javascript" id="javascript"></textarea>
                 </div>
                 <div class="html d-flex">
-                    <h2 class="html">HTML</h2>
+                    <div class="html title">HTML</div>
                     <textarea name="html5" id="html5"></textarea>
                 </div>
                 <div class="css d-flex">
-                    <h2 class="css">CSS</h2>
+                    <div class="css title">CSS</div>
                     <textarea name="css3" id="css3"></textarea>
                 </div>
             </div>

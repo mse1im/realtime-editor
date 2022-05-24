@@ -68,14 +68,15 @@ main {
         }
 
         .editor {
+            height:350px;
             .html, .css, .js {
-                height: 350px;
                 border:1px solid $border;
-                flex-grow: 1;
+                flex: 1;
                 overflow: scroll;
                 flex-direction: column;
+                height: 100%;
 
-                h2 {
+                .title {
                     border-bottom: 1px solid $border;
                     width: 100%;
                     display: flex;
@@ -105,20 +106,19 @@ main {
                 textarea {
                     height: 300px;
                     border: none;
-
-                    &:focus-visible, &:focus-within, &:focus {
-                        border:none;
-                        margin:0;
-                        padding:0;
-                    }
+                    resize: none;
+                    outline: none;
+                    padding: 1rem;
                 }
             }
 
             @media screen and (max-width: $screenmd) {
                 flex-direction: column;
+                height: 100%;
 
                 .html, .css, .js {
                     margin-top: 2rem;
+                    height: 100%;
                 }
             }
         }
